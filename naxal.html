@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body,html {
+    margin:0;
+}
+#emptygif {
+    position:absolute;
+    z-index:50;
+}
+#overlayr1 {
+    position:absolute;
+    background:#fff;
+    opacity:1;
+    width:300px;
+    height:210px;
+    top:30px;
+    z-index:100;
+    display:none;
+}
+#overlayr2 {
+    position:absolute;
+    background:#fff;
+    opacity:1;
+    width:300px;
+    height:160px;
+    top:30px;
+    z-index:100;
+    display:none;
+}
+.content {
+  position: relative;
+  bottom: 75px;
+  padding: 20px;
+  min-width: 400px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-10px);
+  transition: 0.5s;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+
+ <div class="col-md-4">
+         
+
+<img src="NAXALMAP2007.jpg"  width="500" height="405" border="0" usemap="#location-map" id="emptygif" />
+
+<div  class="content" id="overlayr1">&nbsp;
+ <p>Both the Commissions consist of a Chairperson, a ViceChairperson 
+            and three other members. Both the Commissions consist of a Chairperson, a ViceChairperson 
+            and three other members. They are appointed by the President. Both the Commissions consist of a Chairperson, a ViceChairperson 
+            and three other members. They are appointed by the President. They are appointed by the President. </p>   
+ </div>
+<div class="content" id="overlayr2">&nbsp; <p>They are appointed by the President. </p>   
+</div>
+
+<map name="location-map" id="location-map">
+  <area shape="rect" coords="3,208,158,309" href="#" id="r1" />
+  
+<area shape="poly"  href="#" id="r2" coords="218,289,219,280,224,271,225,253,229,239,237,226,252,227,255,208,257,201,263,204,269,194,270,208,272,217,280,228,313,224,300,246,284,256,274,248,264,256,264,271,257,287,250,296,238,301,226,296" 
+/>
+<area shape="rect" coords="0,161,300,350" href="#" id="r3" />
+</map>
+
+
+</div>
+
+
+<div class="col-md-4">
+         
+
+<img src="NAXALMAP2007.jpg"  width="500" height="405" border="0" usemap="#location-map" id="emptygif" />
+
+<div  class="content" id="overlayr1">&nbsp;
+ <p>Both the Commissions consist of a Chairperson, a ViceChairperson 
+            and three other members. Both the Commissions consist of a Chairperson, a ViceChairperson 
+            and three other members. They are appointed by the President. Both the Commissions consist of a Chairperson, a ViceChairperson 
+            and three other members. They are appointed by the President. They are appointed by the President. </p>   
+ </div>
+<div class="content" id="overlayr2">&nbsp; <p>They are appointed by the President. </p>   
+</div>
+
+<map name="location-map" id="location-map">
+  <area shape="rect" coords="3,208,158,309" href="#" id="r1" />
+  
+<area shape="poly"  href="#" id="r2" coords="218,289,219,280,224,271,225,253,229,239,237,226,252,227,255,208,257,201,263,204,269,194,270,208,272,217,280,228,313,224,300,246,284,256,274,248,264,256,264,271,257,287,250,296,238,301,226,296" 
+/>
+<area shape="rect" coords="0,161,300,350" href="#" id="r3" />
+</map>
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript">
+      $(document).ready(function() {
+        if($('#location-map')) {
+            $('#location-map area').each(function() {
+                var id = $(this).attr('id');
+                $(this).mouseover(function() {
+                    $('#overlay'+id).show();
+                    
+                });
+                
+                $(this).mouseout(function() {
+                    var id = $(this).attr('id');
+                    $('#overlay'+id).hide();
+                });
+            
+            });
+        }
+    });
+        
+</script>
+
+</body>
+</html>      
